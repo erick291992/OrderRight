@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F6EE6F2832A03DCDDF0376 /* Pods_OrderRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC25352CEB20E26808A15 /* Pods_OrderRight.framework */; };
 		CD66A07D1CF56DB500D61D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */; };
 		CD66A07F1CF56DB500D61D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A07E1CF56DB500D61D62 /* ViewController.swift */; };
 		CD66A0821CF56DB500D61D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0801CF56DB500D61D62 /* Main.storyboard */; };
@@ -26,9 +27,15 @@
 		CD66A0AA1CF56E9600D61D62 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A09C1CF56E9600D61D62 /* RestaurantsViewController.swift */; };
 		CD66A0AB1CF56E9600D61D62 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */; };
 		CD66A0B01CF6C4A800D61D62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */; };
+		CDCC0C881D02099E004015A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C851D02099E004015A8 /* FBSDKCoreKit.framework */; };
+		CDCC0C891D02099E004015A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C861D02099E004015A8 /* FBSDKLoginKit.framework */; };
+		CDCC0C8A1D02099E004015A8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13AAC25352CEB20E26808A15 /* Pods_OrderRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB1223FDA5DAC8A70E6E2D0 /* Pods-OrderRight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderRight.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight.release.xcconfig"; sourceTree = "<group>"; };
+		C5E76957FF2B01235795B4B9 /* Pods-OrderRight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderRight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight.debug.xcconfig"; sourceTree = "<group>"; };
 		CD66A0791CF56DB500D61D62 /* OrderRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD66A07E1CF56DB500D61D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +57,9 @@
 		CD66A09C1CF56E9600D61D62 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
 		CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDCC0C851D02099E004015A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		CDCC0C861D02099E004015A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +67,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCC0C8A1D02099E004015A8 /* FBSDKShareKit.framework in Frameworks */,
+				13F6EE6F2832A03DCDDF0376 /* Pods_OrderRight.framework in Frameworks */,
+				CDCC0C881D02099E004015A8 /* FBSDKCoreKit.framework in Frameworks */,
+				CDCC0C891D02099E004015A8 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0321A6AD81C1A8D10A5D73BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13AAC25352CEB20E26808A15 /* Pods_OrderRight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58297804F944D2427215D512 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5E76957FF2B01235795B4B9 /* Pods-OrderRight.debug.xcconfig */,
+				7DB1223FDA5DAC8A70E6E2D0 /* Pods-OrderRight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD66A0701CF56DB500D61D62 = {
 			isa = PBXGroup;
 			children = (
 				CD66A07B1CF56DB500D61D62 /* OrderRight */,
 				CD66A07A1CF56DB500D61D62 /* Products */,
+				58297804F944D2427215D512 /* Pods */,
+				0321A6AD81C1A8D10A5D73BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,13 +116,13 @@
 			isa = PBXGroup;
 			children = (
 				CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */,
+				CDCC0C841D02087D004015A8 /* Frameworks */,
 				CD66A0AD1CF6C00800D61D62 /* Controller */,
 				CD66A0AC1CF6BFC500D61D62 /* View */,
 				CD66A0931CF56E9600D61D62 /* LaunchScreen.storyboard */,
 				CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */,
 				CD66A0991CF56E9600D61D62 /* MyCustomTableViewCell.swift */,
 				CD66A09A1CF56E9600D61D62 /* MyCustomTableViewCell.xib */,
-				CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */,
 				CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */,
 				CD66A07E1CF56DB500D61D62 /* ViewController.swift */,
 				CD66A0801CF56DB500D61D62 /* Main.storyboard */,
@@ -102,6 +135,7 @@
 		CD66A0AC1CF6BFC500D61D62 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */,
 				CD66A0961CF56E9600D61D62 /* LoginView.swift */,
 				CD66A0951CF56E9600D61D62 /* LoginTextField.swift */,
 				CD66A0921CF56E9600D61D62 /* CustomView.xib */,
@@ -122,6 +156,16 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		CDCC0C841D02087D004015A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC0C851D02099E004015A8 /* FBSDKCoreKit.framework */,
+				CDCC0C861D02099E004015A8 /* FBSDKLoginKit.framework */,
+				CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD66A08B1CF56DB600D61D62 /* Build configuration list for PBXNativeTarget "OrderRight" */;
 			buildPhases = (
+				3A03400D1B938EB10A2E11BF /* Check Pods Manifest.lock */,
 				CD66A0751CF56DB500D61D62 /* Sources */,
 				CD66A0761CF56DB500D61D62 /* Frameworks */,
 				CD66A0771CF56DB500D61D62 /* Resources */,
+				77046E9C1F4FC26092619318 /* Embed Pods Frameworks */,
+				16A9BD9991F9EB194B1AEB93 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +238,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16A9BD9991F9EB194B1AEB93 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A03400D1B938EB10A2E11BF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77046E9C1F4FC26092619318 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD66A0751CF56DB500D61D62 /* Sources */ = {
@@ -314,23 +409,43 @@
 		};
 		CD66A08C1CF56DB600D61D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E76957FF2B01235795B4B9 /* Pods-OrderRight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OrderRight",
+				);
 				INFOPLIST_FILE = OrderRight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsathome.OrderRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CD66A08D1CF56DB600D61D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB1223FDA5DAC8A70E6E2D0 /* Pods-OrderRight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OrderRight",
+				);
 				INFOPLIST_FILE = OrderRight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsathome.OrderRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -353,6 +468,7 @@
 				CD66A08D1CF56DB600D61D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

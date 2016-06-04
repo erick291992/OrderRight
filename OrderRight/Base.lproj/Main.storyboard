@@ -179,11 +179,11 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="BoP-pE-G7g"/>
                                                     <exclude reference="rQ4-xa-HYa"/>
                                                     <exclude reference="zuK-V1-ttW"/>
-                                                    <exclude reference="BoP-pE-G7g"/>
-                                                    <exclude reference="3u3-ug-frn"/>
                                                     <exclude reference="2NJ-dn-uql"/>
+                                                    <exclude reference="3u3-ug-frn"/>
                                                     <exclude reference="Zth-3b-Ovt"/>
                                                 </mask>
                                             </variation>
@@ -287,11 +287,11 @@
                                                     <exclude reference="H6Q-lo-vsP"/>
                                                     <exclude reference="KMj-EM-To9"/>
                                                     <exclude reference="jZR-4H-smw"/>
-                                                    <exclude reference="Zdb-t7-S8b"/>
                                                     <exclude reference="Fko-jT-wUg"/>
-                                                    <exclude reference="WGw-hc-J80"/>
-                                                    <exclude reference="xEK-Ga-CQs"/>
                                                     <exclude reference="Vig-0l-nIT"/>
+                                                    <exclude reference="WGw-hc-J80"/>
+                                                    <exclude reference="Zdb-t7-S8b"/>
+                                                    <exclude reference="xEK-Ga-CQs"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -336,10 +336,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="j9f-HI-50h"/>
-                                                <exclude reference="gGU-nx-V9F"/>
-                                                <exclude reference="Qne-fg-Fxr"/>
                                                 <exclude reference="DVP-bw-mOn"/>
+                                                <exclude reference="Qne-fg-Fxr"/>
+                                                <exclude reference="gGU-nx-V9F"/>
+                                                <exclude reference="j9f-HI-50h"/>
                                             </mask>
                                         </variation>
                                     </button>
@@ -363,10 +363,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="9en-ay-ykk"/>
-                                                <exclude reference="gO8-Du-Fpe"/>
                                                 <exclude reference="8eA-Lf-poj"/>
+                                                <exclude reference="9en-ay-ykk"/>
                                                 <exclude reference="9ke-7B-bvA"/>
+                                                <exclude reference="gO8-Du-Fpe"/>
                                             </mask>
                                         </variation>
                                     </button>
@@ -417,8 +417,8 @@
                                 <exclude reference="10J-cp-mUV"/>
                                 <exclude reference="R5v-bo-CKP"/>
                                 <exclude reference="Ca6-EM-5vi"/>
-                                <exclude reference="ut5-v3-6ZP"/>
                                 <exclude reference="9es-aP-U6W"/>
+                                <exclude reference="ut5-v3-6ZP"/>
                             </mask>
                         </variation>
                     </view>
