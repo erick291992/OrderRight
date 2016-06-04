@@ -21,8 +21,6 @@
 		CD66A0A41CF56E9600D61D62 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0961CF56E9600D61D62 /* LoginView.swift */; };
 		CD66A0A51CF56E9600D61D62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0971CF56E9600D61D62 /* LoginViewController.swift */; };
 		CD66A0A61CF56E9600D61D62 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */; };
-		CD66A0A71CF56E9600D61D62 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0991CF56E9600D61D62 /* MyCustomTableViewCell.swift */; };
-		CD66A0A81CF56E9600D61D62 /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD66A09A1CF56E9600D61D62 /* MyCustomTableViewCell.xib */; };
 		CD66A0A91CF56E9600D61D62 /* RestaurantPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A09B1CF56E9600D61D62 /* RestaurantPickerViewController.swift */; };
 		CD66A0AA1CF56E9600D61D62 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A09C1CF56E9600D61D62 /* RestaurantsViewController.swift */; };
 		CD66A0AB1CF56E9600D61D62 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */; };
@@ -30,6 +28,8 @@
 		CDCC0C881D02099E004015A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C851D02099E004015A8 /* FBSDKCoreKit.framework */; };
 		CDCC0C891D02099E004015A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C861D02099E004015A8 /* FBSDKLoginKit.framework */; };
 		CDCC0C8A1D02099E004015A8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */; };
+		CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */; };
+		CDCC0C901D026379004015A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8F1D026379004015A8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,6 @@
 		CD66A0961CF56E9600D61D62 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD66A0971CF56E9600D61D62 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		CD66A0991CF56E9600D61D62 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
-		CD66A09A1CF56E9600D61D62 /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
 		CD66A09B1CF56E9600D61D62 /* RestaurantPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantPickerViewController.swift; sourceTree = "<group>"; };
 		CD66A09C1CF56E9600D61D62 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
 		CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		CDCC0C851D02099E004015A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CDCC0C861D02099E004015A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
+		CDCC0C8F1D026379004015A8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +115,13 @@
 		CD66A07B1CF56DB500D61D62 /* OrderRight */ = {
 			isa = PBXGroup;
 			children = (
+				CDCC0C8E1D02636B004015A8 /* Util */,
 				CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */,
+				CDCC0C8B1D025EEB004015A8 /* Model */,
 				CDCC0C841D02087D004015A8 /* Frameworks */,
 				CD66A0AD1CF6C00800D61D62 /* Controller */,
 				CD66A0AC1CF6BFC500D61D62 /* View */,
 				CD66A0931CF56E9600D61D62 /* LaunchScreen.storyboard */,
-				CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */,
-				CD66A0991CF56E9600D61D62 /* MyCustomTableViewCell.swift */,
-				CD66A09A1CF56E9600D61D62 /* MyCustomTableViewCell.xib */,
 				CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */,
 				CD66A07E1CF56DB500D61D62 /* ViewController.swift */,
 				CD66A0801CF56DB500D61D62 /* Main.storyboard */,
@@ -136,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */,
+				CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */,
 				CD66A0961CF56E9600D61D62 /* LoginView.swift */,
 				CD66A0951CF56E9600D61D62 /* LoginTextField.swift */,
 				CD66A0921CF56E9600D61D62 /* CustomView.xib */,
@@ -164,6 +164,22 @@
 				CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDCC0C8B1D025EEB004015A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CDCC0C8E1D02636B004015A8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC0C8F1D026379004015A8 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD66A0A81CF56E9600D61D62 /* MyCustomTableViewCell.xib in Resources */,
 				CD66A0A01CF56E9600D61D62 /* CustomView.xib in Resources */,
 				CD66A0841CF56DB500D61D62 /* Assets.xcassets in Resources */,
 				CD66A0A11CF56E9600D61D62 /* LaunchScreen.storyboard in Resources */,
@@ -292,17 +307,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD66A0A71CF56E9600D61D62 /* MyCustomTableViewCell.swift in Sources */,
 				CD66A0AA1CF56E9600D61D62 /* RestaurantsViewController.swift in Sources */,
 				CD66A0A21CF56E9600D61D62 /* LoginButton.swift in Sources */,
 				CD66A0A41CF56E9600D61D62 /* LoginView.swift in Sources */,
 				CD66A07F1CF56DB500D61D62 /* ViewController.swift in Sources */,
 				CD66A09F1CF56E9600D61D62 /* CustomView.swift in Sources */,
 				CD66A0A91CF56E9600D61D62 /* RestaurantPickerViewController.swift in Sources */,
+				CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */,
 				CD66A0A51CF56E9600D61D62 /* LoginViewController.swift in Sources */,
 				CD66A0A61CF56E9600D61D62 /* MenuTableViewCell.swift in Sources */,
 				CD66A0A31CF56E9600D61D62 /* LoginTextField.swift in Sources */,
 				CD66A07D1CF56DB500D61D62 /* AppDelegate.swift in Sources */,
+				CDCC0C901D026379004015A8 /* Constants.swift in Sources */,
 				CD66A0AB1CF56E9600D61D62 /* RestaurantTableViewCell.swift in Sources */,
 				CD66A09E1CF56E9600D61D62 /* CustomButton.swift in Sources */,
 			);

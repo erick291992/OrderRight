@@ -20,6 +20,7 @@ class RestaurantPickerViewController: UIViewController, UITableViewDataSource, U
 
         tableView.delegate = self
         tableView.dataSource = self
+        FirebaseDataService.sharedInstance().getRestaurant()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,5 +50,6 @@ class RestaurantPickerViewController: UIViewController, UITableViewDataSource, U
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
+    
 
 }
