@@ -11,6 +11,7 @@ import UIKit
 class RestaurantTableViewCell: UITableViewCell {
 
     @IBOutlet weak var likes: UILabel!
+    @IBOutlet weak var restaurantImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +23,13 @@ class RestaurantTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configure(likes: Int){
-        self.likes.text = "\(likes)"
+    func configure(likes: String, imageUrlString:String){
+        self.likes.text = likes
+        
+        let imageURL = NSURL(string: imageUrlString)
+        if let imageData = NSData(contentsOfURL: imageURL!) {
+            self.restaurantImage.image = UIImage(data: imageData)
+        }
     }
 
 }

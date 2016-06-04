@@ -30,6 +30,7 @@
 		CDCC0C8A1D02099E004015A8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */; };
 		CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */; };
 		CDCC0C901D026379004015A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8F1D026379004015A8 /* Constants.swift */; };
+		CDCC0C921D0292F1004015A8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C911D0292F1004015A8 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		CDCC0C871D02099E004015A8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		CDCC0C8F1D026379004015A8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CDCC0C911D0292F1004015A8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +117,10 @@
 		CD66A07B1CF56DB500D61D62 /* OrderRight */ = {
 			isa = PBXGroup;
 			children = (
+				CDCC0C841D02087D004015A8 /* Frameworks */,
 				CDCC0C8E1D02636B004015A8 /* Util */,
 				CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */,
 				CDCC0C8B1D025EEB004015A8 /* Model */,
-				CDCC0C841D02087D004015A8 /* Frameworks */,
 				CD66A0AD1CF6C00800D61D62 /* Controller */,
 				CD66A0AC1CF6BFC500D61D62 /* View */,
 				CD66A0931CF56E9600D61D62 /* LaunchScreen.storyboard */,
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */,
+				CDCC0C911D0292F1004015A8 /* Restaurant.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				CD66A0A41CF56E9600D61D62 /* LoginView.swift in Sources */,
 				CD66A07F1CF56DB500D61D62 /* ViewController.swift in Sources */,
 				CD66A09F1CF56E9600D61D62 /* CustomView.swift in Sources */,
+				CDCC0C921D0292F1004015A8 /* Restaurant.swift in Sources */,
 				CD66A0A91CF56E9600D61D62 /* RestaurantPickerViewController.swift in Sources */,
 				CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */,
 				CD66A0A51CF56E9600D61D62 /* LoginViewController.swift in Sources */,

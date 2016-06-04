@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class RestaurantPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let items = [1,2,3,4,5,6,7,8,9]
+    var restaurants = [Restaurant]()
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +22,10 @@ class RestaurantPickerViewController: UIViewController, UITableViewDataSource, U
 
         tableView.delegate = self
         tableView.dataSource = self
-        FirebaseDataService.sharedInstance().getRestaurant()
+        FirebaseDataService.sharedInstance().getRestaurant { (FetchedRestaurants) in
+            self.restaurants = FetchedRestaurants
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,13 +37,14 @@ class RestaurantPickerViewController: UIViewController, UITableViewDataSource, U
     // MARK: - Table view data source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+//        return items.count
+        return restaurants.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("RestaurantTableViewCell") as! RestaurantTableViewCell
-        cell.configure(self.items[indexPath.row])
+        cell.configure(restaurants[indexPath.row].name, imageUrlString: restaurants[indexPath.row].imageUrl)
         return cell
     }
     

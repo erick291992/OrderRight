@@ -190,6 +190,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likes" destination="hOm-Gc-YF4" id="I9p-Ki-vwP"/>
+                                            <outlet property="restaurantImage" destination="Cwc-71-pD4" id="EjR-5A-sGC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

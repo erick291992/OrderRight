@@ -21,6 +21,9 @@ class FirebaseDataService {
     var REF_RESTAURANTS:FIRDatabaseReference{
         return REF_DATABASE.child("Restaurants")
     }
+    var REF_RESTAURANTS_PERU:FIRDatabaseReference{
+        return REF_RESTAURANTS.child("peruvian")
+    }
     var REF_DATABASE:FIRDatabaseReference {
         return _REF_DATABASE
     }
@@ -28,19 +31,24 @@ class FirebaseDataService {
     func createFireBaseUser(uid:String, user: AnyObject){
         REF_USERS.child(uid).setValue(user)
     }
-    func isUserLoggedin(onSuccess:()->Void){
-        FIRAuth.auth()?.addAuthStateDidChangeListener({ (Auth, user) in
-            if let user = user{
-                onSuccess()
-            }
-        })
-    }
-    func getRestaurant(){
-        REF_RESTAURANTS.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+//    func isUserLoggedin(onSuccess:()->Void){
+//        FIRAuth.auth()?.addAuthStateDidChangeListener({ (Auth, user) in
+//            if let user = user{
+//                onSuccess()
+//            }
+//        })
+//    }
+    func getRestaurant(completionHandlerForRestaurants:(FetchedRestaurants:[Restaurant])->Void){
+        REF_RESTAURANTS_PERU.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             print("snanpshot")
-            print(snapshot.value)
-            let postDict = snapshot.value as! [String : AnyObject]
-            // ...
+            var FetchedRestaurants = [Restaurant]()
+            let restaurants = snapshot.value as! [String : [String:AnyObject]]
+            for (_,value) in restaurants{
+                print(value)
+                let res = Restaurant(dictionary: value)
+                FetchedRestaurants.append(res)
+            }
+            completionHandlerForRestaurants(FetchedRestaurants: FetchedRestaurants)
         })
     }
     
