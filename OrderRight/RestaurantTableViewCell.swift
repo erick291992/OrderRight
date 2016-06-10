@@ -25,11 +25,22 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     func configure(likes: String, imageUrlString:String){
         self.likes.text = likes
-        
-        let imageURL = NSURL(string: imageUrlString)
-        if let imageData = NSData(contentsOfURL: imageURL!) {
-            self.restaurantImage.image = UIImage(data: imageData)
+        if restaurantImage.image == UIImage(named: "food-img"){
+            FirebaseDataService.sharedInstance().donwloadImg(NSURL(string: imageUrlString)!, completionHandlerForIMG: { (data) in
+                let image = UIImage(data: data)
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.restaurantImage.image = image
+                }
+            })
         }
+        else{
+            print("image already set")
+        }
+        
+//        let imageURL = NSURL(string: imageUrlString)
+//        if let imageData = NSData(contentsOfURL: imageURL!) {
+//            self.restaurantImage.image = UIImage(data: imageData)
+//        }
     }
 
 }

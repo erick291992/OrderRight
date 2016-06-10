@@ -11,7 +11,6 @@ import Firebase
 
 class RestaurantPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let items = [1,2,3,4,5,6,7,8,9]
     var restaurants = [Restaurant]()
     
     
@@ -53,9 +52,9 @@ class RestaurantPickerViewController: UIViewController, UITableViewDataSource, U
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let controller = self.storyboard!.instantiateViewControllerWithIdentifier("RestaurantsViewController") as! RestaurantsViewController
+        controller.restaurant = restaurants[indexPath.row]
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
-    
 
 }

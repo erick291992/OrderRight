@@ -34,8 +34,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func login(sender: AnyObject) {
+        //self.nextViewController()
+    }
+    @IBAction func facebookLogin(sender: AnyObject) {
         startfacebookLogin()
     }
+    
 
     func startfacebookLogin(){        
         let facebookLogin = FBSDKLoginManager()

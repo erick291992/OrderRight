@@ -13,8 +13,10 @@ class RestaurantsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     var selectedCells = [NSIndexPath:Bool]()
-    let sections = ["Appetizers", "Main Dish", "Dessert", "Drinks"]
+    let sections = ["Appetizers", "MainDish", "Desserts", "Drinks"]
     let items = [["1","2","3"],["4","5","6"],["7","8","9"],["a","b","c"]]
+    var restaurant:Restaurant!
+    var menuDic = [String:[MenuItem]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,17 @@ class RestaurantsViewController: UIViewController, UITableViewDataSource, UITabl
 //        tableView.registerNib(UINib(nibName: "MyCustomTableViewCell",bundle: nil), forCellReuseIdentifier: "MyCustomTableViewCell")
 
         // Do any additional setup after loading the view.
+        print(restaurant.restaurantKey)
+        FirebaseDataService.sharedInstance().getMenuItems(restaurant.restaurantKey) { (menuDictionary) in
+            self.menuDic = menuDictionary
+            //print(menuDictionary["Dessert"]!.count)
+            //print(self.menuDic["Appetizers"]!.count)
+            dispatch_async(dispatch_get_main_queue()) {
+                self.menuDic = menuDictionary
+                self.tableView.reloadData()
+                //print(self.menuDic["Drinks"]![0].name)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +69,19 @@ class RestaurantsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items[section].count
+//        return items[section].count
+        let sect = sections[section]
+        print(sect)
+//        if let menuDic = menuDic{
+//            if let menuItems = menuDic[sect]{
+//                print(menuItems.count)
+//                return menuItems.count
+//            }
+//        }
+        if let menuItems = menuDic[sect]{
+            return menuItems.count
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -66,9 +91,15 @@ class RestaurantsViewController: UIViewController, UITableViewDataSource, UITabl
         // Configure the cell...
         
         //cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-        cell.configure(self.items[indexPath.section][indexPath.row])
-
-        print(selectedCells.count)
+//        cell.configure(self.items[indexPath.section][indexPath.row])
+//
+//        print(selectedCells.count)
+        let section = sections[indexPath.section]
+        if let menuItems = menuDic[section]{
+            let menuItem = menuItems[indexPath.row]
+            cell.configure(menuItem.name)
+        }
+        
         if let selectedCell = selectedCells[indexPath] where selectedCell == true{
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
 
@@ -76,7 +107,6 @@ class RestaurantsViewController: UIViewController, UITableViewDataSource, UITabl
         else{
             cell.accessoryType = UITableViewCellAccessoryType.None
         }
-        
         return cell
     }
     // MARK: - Table view delegate

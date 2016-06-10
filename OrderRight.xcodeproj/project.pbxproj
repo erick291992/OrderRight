@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		13F6EE6F2832A03DCDDF0376 /* Pods_OrderRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC25352CEB20E26808A15 /* Pods_OrderRight.framework */; };
+		CD6530C11D077F5B00C5EDC2 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6530C01D077F5A00C5EDC2 /* MenuItem.swift */; };
 		CD66A07D1CF56DB500D61D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */; };
 		CD66A07F1CF56DB500D61D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A07E1CF56DB500D61D62 /* ViewController.swift */; };
 		CD66A0821CF56DB500D61D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0801CF56DB500D61D62 /* Main.storyboard */; };
 		CD66A0841CF56DB500D61D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0831CF56DB500D61D62 /* Assets.xcassets */; };
 		CD66A09E1CF56E9600D61D62 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0901CF56E9600D61D62 /* CustomButton.swift */; };
-		CD66A09F1CF56E9600D61D62 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0911CF56E9600D61D62 /* CustomView.swift */; };
-		CD66A0A01CF56E9600D61D62 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0921CF56E9600D61D62 /* CustomView.xib */; };
 		CD66A0A11CF56E9600D61D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD66A0931CF56E9600D61D62 /* LaunchScreen.storyboard */; };
-		CD66A0A21CF56E9600D61D62 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0941CF56E9600D61D62 /* LoginButton.swift */; };
 		CD66A0A31CF56E9600D61D62 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0951CF56E9600D61D62 /* LoginTextField.swift */; };
 		CD66A0A41CF56E9600D61D62 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0961CF56E9600D61D62 /* LoginView.swift */; };
 		CD66A0A51CF56E9600D61D62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66A0971CF56E9600D61D62 /* LoginViewController.swift */; };
@@ -31,12 +29,14 @@
 		CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */; };
 		CDCC0C901D026379004015A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C8F1D026379004015A8 /* Constants.swift */; };
 		CDCC0C921D0292F1004015A8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0C911D0292F1004015A8 /* Restaurant.swift */; };
+		CDCC0CA61D075127004015A8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC0CA51D075127004015A8 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13AAC25352CEB20E26808A15 /* Pods_OrderRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB1223FDA5DAC8A70E6E2D0 /* Pods-OrderRight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderRight.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight.release.xcconfig"; sourceTree = "<group>"; };
 		C5E76957FF2B01235795B4B9 /* Pods-OrderRight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderRight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrderRight/Pods-OrderRight.debug.xcconfig"; sourceTree = "<group>"; };
+		CD6530C01D077F5A00C5EDC2 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		CD66A0791CF56DB500D61D62 /* OrderRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD66A07C1CF56DB500D61D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD66A07E1CF56DB500D61D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +44,7 @@
 		CD66A0831CF56DB500D61D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD66A0881CF56DB600D61D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD66A0901CF56E9600D61D62 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		CD66A0911CF56E9600D61D62 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		CD66A0921CF56E9600D61D62 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		CD66A0931CF56E9600D61D62 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CD66A0941CF56E9600D61D62 /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		CD66A0951CF56E9600D61D62 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CD66A0961CF56E9600D61D62 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD66A0971CF56E9600D61D62 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +59,7 @@
 		CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		CDCC0C8F1D026379004015A8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CDCC0C911D0292F1004015A8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		CDCC0CA51D075127004015A8 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +115,9 @@
 		CD66A07B1CF56DB500D61D62 /* OrderRight */ = {
 			isa = PBXGroup;
 			children = (
+				CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */,
 				CDCC0C841D02087D004015A8 /* Frameworks */,
 				CDCC0C8E1D02636B004015A8 /* Util */,
-				CD66A0AF1CF6C4A800D61D62 /* GoogleService-Info.plist */,
 				CDCC0C8B1D025EEB004015A8 /* Model */,
 				CD66A0AD1CF6C00800D61D62 /* Controller */,
 				CD66A0AC1CF6BFC500D61D62 /* View */,
@@ -136,14 +134,8 @@
 		CD66A0AC1CF6BFC500D61D62 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */,
-				CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */,
-				CD66A0961CF56E9600D61D62 /* LoginView.swift */,
-				CD66A0951CF56E9600D61D62 /* LoginTextField.swift */,
-				CD66A0921CF56E9600D61D62 /* CustomView.xib */,
-				CD66A0941CF56E9600D61D62 /* LoginButton.swift */,
-				CD66A0911CF56E9600D61D62 /* CustomView.swift */,
-				CD66A0901CF56E9600D61D62 /* CustomButton.swift */,
+				CDCC0C951D0318AE004015A8 /* CustomViews */,
+				CDCC0C941D02B2A9004015A8 /* Cells */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,8 +163,10 @@
 		CDCC0C8B1D025EEB004015A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */,
+				CDCC0C931D02B210004015A8 /* Client */,
 				CDCC0C911D0292F1004015A8 /* Restaurant.swift */,
+				CDCC0CA51D075127004015A8 /* Menu.swift */,
+				CD6530C01D077F5A00C5EDC2 /* MenuItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,6 +177,33 @@
 				CDCC0C8F1D026379004015A8 /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		CDCC0C931D02B210004015A8 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC0C8C1D02601E004015A8 /* FirebaseDataService.swift */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		CDCC0C941D02B2A9004015A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CD66A09D1CF56E9600D61D62 /* RestaurantTableViewCell.swift */,
+				CD66A0981CF56E9600D61D62 /* MenuTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		CDCC0C951D0318AE004015A8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CD66A0961CF56E9600D61D62 /* LoginView.swift */,
+				CD66A0951CF56E9600D61D62 /* LoginTextField.swift */,
+				CD66A0901CF56E9600D61D62 /* CustomButton.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD66A0A01CF56E9600D61D62 /* CustomView.xib in Resources */,
 				CD66A0841CF56DB500D61D62 /* Assets.xcassets in Resources */,
 				CD66A0A11CF56E9600D61D62 /* LaunchScreen.storyboard in Resources */,
 				CD66A0821CF56DB500D61D62 /* Main.storyboard in Resources */,
@@ -311,15 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD66A0AA1CF56E9600D61D62 /* RestaurantsViewController.swift in Sources */,
-				CD66A0A21CF56E9600D61D62 /* LoginButton.swift in Sources */,
 				CD66A0A41CF56E9600D61D62 /* LoginView.swift in Sources */,
+				CDCC0CA61D075127004015A8 /* Menu.swift in Sources */,
 				CD66A07F1CF56DB500D61D62 /* ViewController.swift in Sources */,
-				CD66A09F1CF56E9600D61D62 /* CustomView.swift in Sources */,
 				CDCC0C921D0292F1004015A8 /* Restaurant.swift in Sources */,
 				CD66A0A91CF56E9600D61D62 /* RestaurantPickerViewController.swift in Sources */,
 				CDCC0C8D1D02601E004015A8 /* FirebaseDataService.swift in Sources */,
 				CD66A0A51CF56E9600D61D62 /* LoginViewController.swift in Sources */,
 				CD66A0A61CF56E9600D61D62 /* MenuTableViewCell.swift in Sources */,
+				CD6530C11D077F5B00C5EDC2 /* MenuItem.swift in Sources */,
 				CD66A0A31CF56E9600D61D62 /* LoginTextField.swift in Sources */,
 				CD66A07D1CF56DB500D61D62 /* AppDelegate.swift in Sources */,
 				CDCC0C901D026379004015A8 /* Constants.swift in Sources */,

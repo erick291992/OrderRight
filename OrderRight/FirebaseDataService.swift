@@ -27,6 +27,9 @@ class FirebaseDataService {
     var REF_DATABASE:FIRDatabaseReference {
         return _REF_DATABASE
     }
+    var REF_MENU:FIRDatabaseReference {
+        return _REF_DATABASE.child("menu")
+    }
     
     func createFireBaseUser(uid:String, user: AnyObject){
         REF_USERS.child(uid).setValue(user)
@@ -38,18 +41,56 @@ class FirebaseDataService {
 //            }
 //        })
 //    }
-    func getRestaurant(completionHandlerForRestaurants:(FetchedRestaurants:[Restaurant])->Void){
+    func getRestaurant(completionHandlerForRestaurants:(fetchedRestaurants:[Restaurant])->Void){
         REF_RESTAURANTS_PERU.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             print("snanpshot")
-            var FetchedRestaurants = [Restaurant]()
+            var fetchedRestaurants = [Restaurant]()
             let restaurants = snapshot.value as! [String : [String:AnyObject]]
-            for (_,value) in restaurants{
-                print(value)
-                let res = Restaurant(dictionary: value)
-                FetchedRestaurants.append(res)
+            for (key,value) in restaurants{
+                let res = Restaurant(restaurantKey: key,dictionary: value)
+                fetchedRestaurants.append(res)
             }
-            completionHandlerForRestaurants(FetchedRestaurants: FetchedRestaurants)
+            completionHandlerForRestaurants(fetchedRestaurants: fetchedRestaurants)
         })
+    }
+    
+    func getMenuItems(restaurantKey:String, completionHandlerForMenu:(menuDictionary:[String:[MenuItem]])->Void) {
+        var menuDictionary = [String:[MenuItem]]()
+        REF_MENU.child(restaurantKey).child("menu1").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let menus = snapshot.value as! [String : [String:AnyObject]]
+            for (key,value) in menus{
+                //print(key)
+                var menuItems = [MenuItem]()
+                for (_,v) in value{
+                    menuItems.append(MenuItem(dictionary: v as! [String : AnyObject]))
+                }
+                menuDictionary[key] = menuItems
+            }
+            //print(menuDictionary.count)
+            completionHandlerForMenu(menuDictionary: menuDictionary)
+        })
+    }
+    
+    func donwloadImg(imageUrlPath:NSURL, completionHandlerForIMG:(NSData)->Void){
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: configuration)
+        let request = NSURLRequest(URL: imageUrlPath)
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
+            print("task down")
+            guard error == nil else{
+                print("error\(error?.localizedDescription)")
+                return
+            }
+            guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else{
+                print("Your request returned a status code other than 2xx!")
+                return
+            }
+            guard let data = data else{
+                return
+            }
+            completionHandlerForIMG(data)
+        }
+        dataTask.resume()
     }
     
     class func sharedInstance() -> FirebaseDataService {
